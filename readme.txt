@@ -1,9 +1,3 @@
-Team Members:
-
-1. Yaswanth Janardhan Konduru
-2. Neelesh shashidhar
-3. Chaitanya Ravuri
-
 Steps to run the project:
 
 The project is put under a folder called laravel and inside it consists of 3 folders and 2 files.
@@ -58,12 +52,5 @@ start apache and mysql in xampp.
 
 
 Now we are good to go the project should work without any errors.
-
-Resident login - username:- yashjana@gmail.com, password:- Yash@3277
-Manager login - username:- neelesh216@gmail.com, password:- Yash@3277
-Visitor login - username:- yaswanthjk3277@gmail.com, password:- Yash@3277
-Admin login - username:- chaitanya.lexus@gmail.com, password:- Yash@3277
-
-or you can also register and use the credentials to login.
 
 
