@@ -1,0 +1,2543 @@
+/*
+Team Members: 
+Janardhan Konduru, Yaswanth - 1001741845
+Ravuri, Chaitanya - 1001837252
+Shashidhar, Neelesh - 1001860682
+*/
+
+
+/*
+References:
+
+https://medium.com/geekculture/call-external-javascript-function-from-react-components-c5f52d1a368e#:~:text=First%2C%20create%20a%20React%20project%20by%20typing%20inside%20the%20terminal.&text=To%20execute%20a%20external%20JavaScript%20function%2C%20we%20need%20to%20put,alertHello%E2%80%9D%20inside%20the%20square%20bracket.&text=If%20you%20click%20on%20the,external%20JavaScript%20function%20from%20React
+
+https://fahmidasclassroom.com/how-to-convert-html-template-into-react-project/
+
+https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
+
+Image References:
+
+http://clipart-library.com/clipart/1066303.htm
+
+https://www.clipartmax.com/middle/m2i8K9i8Z5i8Z5K9_cupmanager-manager-cartoon-png/
+
+https://image.shutterstock.com/image-vector/black-silhouette-city-on-white-260nw-1544433407.jpg
+
+https://www.facebook.com/admin2122/photos/a.307564143237803/307564556571095/
+
+https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80
+
+https://images.unsplash.com/photo-1525953776754-6c4b7ee655ab?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1021&q=80
+
+https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1169&q=80
+
+https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80
+
+https://images.squarespace-cdn.com/content/v1/55bebb51e4b036c52ebe8c45/1569304867249-56EZ8PY3M7ZCA7AC0E3D/modern+rustic+dining+room?format=750w
+
+https://www.technocrazed.com/wp-content/uploads/2015/12/black-wallpaper-to-set-as-background-5.jpg
+
+https://www.youtube.com/watch?v=NiJTKrMyBL4
+
+https://github.com/NikValdez/ChatAppTut
+
+https://www.npmjs.com/package/@material-ui/core
+
+https://laravel.com/docs/8.x/queries
+
+https://www.youtube.com/watch?v=NidmTs2xZaE
+
+https://www.youtube.com/watch?v=CgV8omlWq2o
+
+https://github.com/NikValdez/ChatAppTut
+
+https://www.youtube.com/watch?v=kWEvrHVg8kI
+
+https://stackoverflow.com/questions/58122219/constructor-props-equivalent-in-react-hooks-for-history-push
+
+
+*/
+
+/* Home Page Code */
+body{
+    background-color: black;
+    color: white;
+    overflow:auto;
+    overflow-x:hidden;
+}
+
+#logo{
+    float: left;
+    margin-left:10px;
+}
+
+#logo img{
+    width:100px;
+    height:50px;
+}
+
+#nav1{
+    text-align:right;
+    margin-right:120px;
+    padding-top:20px;
+}
+
+#nav1 ul li{
+
+    list-style-type: none;
+    display: inline-block;
+    margin-left:70px;
+}
+
+#nav1 ul li a{
+    text-decoration:none;
+    color:white;
+}
+
+header{
+    width:100%;
+    text-align: right;
+    position:relative;
+    margin-bottom:50px;
+}
+
+#firstdiv {
+    position:relative;
+}
+
+#firstback{
+    height:900px;
+    width:100%;
+    z-index: 1;
+    position: absolute;
+}
+
+#firstdiv h1 {
+    z-index: 2;
+    position: absolute;
+    text-align: center;
+    margin-top:400px;
+    margin-left:100px;
+    font-size:5vw;
+}
+#firstdiv h2 {
+    z-index: 2;
+    position: absolute;
+    text-align: center;
+    margin-top:350px;
+    margin-left:100px;
+    font-size:2.5vw;
+}
+
+
+#login{
+    text-decoration: None;
+    position: absolute;
+    color:white;
+    z-index: 2;
+    margin-top: 550px;
+    margin-left:100px;
+    padding: 20px 20px;
+    background-color:rgb(40, 29, 197);
+    border-radius: 10px;
+}
+
+#signup{
+    text-decoration: None;
+    position: absolute;
+    color:white;
+    z-index: 2;
+    margin-top: 550px;
+    margin-left:100px;
+    padding: 20px 20px;
+    border-radius: 10px;
+    border: 1px solid white;
+    margin-left:250px;
+}
+
+#mix {
+    position: absolute;
+    z-index: 2;
+    max-width:100%;
+    width:500px;
+    height:500px;
+    margin-left:1200px;
+    margin-top:200px;
+}
+
+#aboutdiv{
+    position:relative;
+}
+
+#aboutdiv img{
+    margin-top:1000px;
+    position: absolute;
+    z-index:2;
+    width:500px;
+    height:700px;
+    margin-left:150px;
+
+}
+
+#aboutdiv ul{
+    position:absolute;
+    z-index: 2;
+    margin-top:1200px;
+    margin-left:800px;
+    font-size: 1.5vw;
+}
+
+footer{
+    z-index: 2;
+    margin-top:1900px;
+    text-align:center;
+    background-color:#1f1f1f;
+    padding:20px;
+    width:100%;
+}
+
+footer img{
+    width:100px;
+    height:50px;
+}
+
+footer input{
+    height:30px;
+    background-color: #1f1f1f;
+    border:none;
+    border-bottom: 1px solid white;
+    color:white;
+    margin:20px;
+}
+
+footer input:focus{
+    border:none;
+    outline:none;
+    border-bottom: 1px solid white;
+    color:white;
+}
+
+footer textarea{
+    background-color: #1f1f1f;
+    color:white;
+}
+
+footer button{
+    text-decoration: None;
+    color:white;
+    padding: 20px 20px;
+    width:300px;
+    background-color:rgb(29, 197, 169);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.fa {
+    padding: 30px;
+    font-size: 2.5vw;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    color: white;
+}
+
+#login-form{
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position:fixed;
+    padding-top:100px;
+    z-index:2;
+    overflow:auto;
+    
+}
+
+#login-form form{
+    position:absolute;
+    z-index:2;
+    width:400px;
+    height:450px;
+    background-color:#1f1f1f;
+    border-radius: 10px;
+    padding:10px;
+    margin-left:40%;
+}
+
+#login-form select{
+    margin-left:50px;
+    background-color:#1f1f1f;
+    width:200px;
+    border:none;
+    color:white;
+    border-bottom:1px solid white;
+}
+
+#login-form select:focus{
+    border:none;
+    outline:none;
+    border-bottom:1px solid white;
+}
+
+#login-form h1{
+    margin-left:20px;
+}
+
+#login-form input{
+    width:80%;
+    margin-left:20px;
+    height:20px;
+    background-color: #1f1f1f;
+    border:none;
+    border-bottom: 1px solid white;
+    color:white;
+
+}
+
+#login-form input:focus{
+    border:none;
+    outline:none;
+    border-bottom: 1px solid white;
+    color:white;
+}
+
+#login-form label{
+    margin-left:20px;
+    color:white;
+}
+
+#login-form button{
+    margin-left: 20px;
+    background: #38ce9c;
+    color: white;
+    padding:10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 7px #2fb68970;
+    cursor:pointer;
+    font-size:0.75vw;
+    width:80px;
+}
+
+#forgotp{
+    text-decoration: none;
+    color:#38ce9c;
+    margin-left:20px;
+}
+
+#forgot-pass-form{
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position:fixed;
+    padding-top:100px;
+    z-index:2;
+    display:none;
+    overflow:auto;
+    
+}
+
+#forgot-pass-form form{
+    position:absolute;
+    z-index:2;
+    width:400px;
+    height:400px;
+    background-color:#1f1f1f;
+    border-radius: 10px;
+    padding:10px;
+    margin-left:40%;
+}
+
+#forgot-pass-form h1{
+    margin-left:20px;
+}
+
+#forgot-pass-form input{
+    width:80%;
+    margin-left:20px;
+    height:20px;
+    background-color: #1f1f1f;
+    border:none;
+    border-bottom: 1px solid white;
+    color:white;
+
+}
+
+#forgot-pass-form input:focus{
+    border:none;
+    outline:none;
+    border-bottom: 1px solid white;
+    color:white;
+}
+
+#forgot-pass-form label{
+    margin-left:20px;
+    color:white;
+}
+
+#forgot-pass-form button{
+    margin-left: 20px;
+    background: #38ce9c;
+    color: white;
+    padding:10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 7px #2fb68970;
+    cursor:pointer;
+    font-size:0.75vw;
+    width:80px;
+}
+
+#admin-login-form{
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position:fixed;
+    padding-top:100px;
+    z-index:2;
+    display:none;
+    overflow:auto;
+    
+}
+
+#admin-login-form form{
+    position:absolute;
+    z-index:2;
+    width:400px;
+    height:400px;
+    background-color:#1f1f1f;
+    border-radius: 10px;
+    padding:10px;
+    margin-left:40%;
+}
+
+#admin-login-form h1{
+    margin-left:20px;
+}
+
+#admin-login-form input{
+    width:80%;
+    margin-left:20px;
+    height:20px;
+    background-color: #1f1f1f;
+    border:none;
+    border-bottom: 1px solid white;
+    color:white;
+
+}
+
+#admin-login-form input:focus{
+    border:none;
+    outline:none;
+    border-bottom: 1px solid white;
+    color:white;
+}
+
+#admin-login-form label{
+    margin-left:20px;
+    color:white;
+}
+
+#admin-login-form button{
+    margin-left: 20px;
+    background: #38ce9c;
+    color: white;
+    padding:10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 7px #2fb68970;
+    cursor:pointer;
+    font-size:0.75vw;
+    width:80px;
+}
+
+
+#visitor-form{
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position:fixed;
+    padding-top:50px;
+    z-index:2;
+    overflow:auto;
+    
+}
+
+#visitor-form form{
+    position:absolute;
+    z-index:2;
+    width:700px;
+    height:500px;
+    background-color:#1f1f1f;
+    border-radius: 10px;
+    padding:10px;
+    margin-left:30%;
+}
+
+#visitor-form h1{
+    margin-left:20px;
+}
+
+#visitor-form input{
+    margin-left:20px;
+    height:20px;
+    background-color: #1f1f1f;
+    border:none;
+    border-bottom: 1px solid white;
+    color:white;
+
+}
+
+#visitor-form input:focus{
+    border:none;
+    outline:none;
+    border-bottom: 1px solid white;
+    color:white;
+}
+
+#visitor-form label{
+    margin-left:20px;
+    color:white;
+}
+
+#visitor-form button{
+    margin-left: 20px;
+    background: #9ace38;
+    color: white;
+    padding:10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 7px #77b62f70;
+    cursor:pointer;
+    font-size:0.75vw;
+    width:80px;
+}
+
+@media (min-width: 200px) and (max-width: 500px) {
+    #mix {
+      margin-left:100px;
+      width:150px;
+      height:150px;
+      margin-top:100px;
+    }
+
+    #aboutdiv img{
+        width:150px;
+        height:350px;
+        margin-left:100px;
+    }
+
+    #aboutdiv ul{
+        margin-top:1400px;
+        margin-left:100px;
+    }
+
+    #signup{
+        padding: 10px 10px;
+        margin-top:600px;
+        margin-left:100px;
+    }
+
+    #login{
+        padding:10px 10px;
+    }
+
+    #nav{
+        padding-top:100px;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 600px) {
+    #mix {
+      margin-left:100px;
+      width:200px;
+      height:200px;
+      margin-top:100px;
+    }
+
+    #aboutdiv img{
+        width:250px;
+        height:450px;
+        margin-left:100px;
+    }
+
+    #aboutdiv ul{
+        margin-top:1500px;
+        margin-left:100px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 700px) {
+    #mix {
+      margin-left:100px;
+      width:250px;
+      height:250px;
+      margin-top:100px;
+    }
+
+    #aboutdiv img{
+        width:350px;
+        height:550px;
+        margin-left:100px;
+    }
+
+    #aboutdiv ul{
+        margin-top:1600px;
+        margin-left:100px;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 900px) {
+    #mix {
+      margin-left:100px;
+      width:300px;
+      height:300px;
+      margin-top:50px;
+    }
+
+    #aboutdiv img{
+        width:450px;
+        height:650px;
+        margin-left:100px;
+    }
+
+    #aboutdiv ul{
+        margin-top:1700px;
+        margin-left:100px;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1200px) {
+    #mix {
+      margin-left:100px;
+      width:300px;
+      height:300px;
+      margin-top:50px;
+    }
+
+    #aboutdiv img{
+        width:450px;
+        height:650px;
+        margin-left:100px;
+    }
+
+    #aboutdiv ul{
+        margin-top:1700px;
+        margin-left:100px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1300px) {
+    #mix {
+      margin-left:700px;
+      width:400px;
+      height:400px;
+    }
+
+    #aboutdiv img{
+        width:500px;
+        height:700px;
+        margin-left:100px;
+    }
+}
+
+@media (min-width: 1300px) and (max-width: 1400px) {
+    #mix {
+      margin-left:800px;
+      width:500px;
+      height:500px;
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1700px) {
+    #mix {
+      margin-left:900px;
+    }
+}
+
+@media (min-width: 1700px) and (max-width: 2000px) {
+    #mix {
+      margin-left:1200px;
+    }
+}
+
+/* Home Page Code*/
+
+/*Signup Page Code*/
+
+#signupform{
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position:fixed;
+    padding-top:60px;
+    z-index:2;
+    overflow:auto;
+}
+
+#signupform form{
+    position:absolute;
+    z-index:2;
+    width:700px;
+    height:500px;
+    background-color:#1f1f1f;
+    border-radius: 10px;
+    padding:50px;
+    margin-left:25%;
+}
+
+#signupform input{
+    height:20px;
+    background-color: #1f1f1f;
+    border:none;
+    border-bottom: 1px solid white;
+    color:white;
+
+}
+
+#signupform input:focus{
+    border:none;
+    outline:none;
+    border-bottom: 1px solid white;
+    color:white;
+}
+
+#signupform label{
+    color:white;
+}
+
+#signupform button{
+    background: #b038ce;
+    color: white;
+    padding:10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 7px #972fb670;
+    cursor:pointer;
+    font-size:15px;
+    width:80px;
+}
+
+#signupregister{
+    margin-top:20px;
+}
+
+#signupform select{
+    background-color:#1f1f1f;
+    width:200px;
+    border:none;
+    color:white;
+    border-bottom:1px solid white;
+}
+
+#signupform select:focus{
+    border:none;
+    outline:none;
+    border-bottom:1px solid white;
+}
+
+/*Signup Page Code*/
+
+/*Admin Code*/
+#leftbar{
+    height:100%;
+    width:300px;
+    float:left;
+    background-color: #1f1f1f;
+    text-align:center;
+    padding-top:70px;
+    position:fixed;
+}
+
+#leftbar img{
+    width:200px;
+}
+
+#leftbar ul{
+    padding:0;
+}
+
+#leftbar ul li{
+
+    list-style-type: none;
+    width:100%;
+    padding-top:30px;
+    padding-bottom:30px;
+    background-color:#1f1f1f;
+}
+
+#leftbar ul li:hover{
+    background-color:black;
+}
+
+#leftbar ul li.selected{
+    background-color:black;
+}
+
+#leftbar ul a{
+    text-decoration:none;
+    color:white;
+}
+
+#adminlogout{
+    text-decoration: none;
+    background-color:blue;
+    color:white;
+    padding:10px;
+    border-radius:5px;
+}
+
+#rightbar{
+    position:fixed;
+    height:100%;
+    width:100%;
+    color:white;
+    margin-left:280px;
+    padding-left:30px;
+}
+
+#rightbar h1{
+    margin-left:20px;
+}
+
+#rightbar div{
+    position:absolute;
+}
+
+#buildings{
+    display:none;
+}
+
+#visitors{
+    display:none;
+}
+
+#pool{
+    display:none;
+}
+
+#garden{
+    display:none;
+}
+
+#aservices{
+    display:none;
+}
+
+#piecontainer{
+    margin-left:100px;
+    margin-top:50px;
+    width:300px;
+    height:500px;
+    padding:20px;
+    box-shadow: 0px 0px 10px rgb(29, 27, 27);
+    border-radius:10px;
+}
+
+#pie-chart{
+    margin-left:30px;
+    display: block;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-image: conic-gradient(
+        rgb(211, 58, 58) 252deg, 
+        rgb(58, 58, 197) 0 108deg);
+}
+
+#availablebtn {
+    background-color: rgb(58, 58, 197);
+    border:none;
+    padding:10px;
+}
+
+#occupiedbtn{
+    background-color:rgb(211, 58, 58) ;
+    border:none;
+    padding:10px;
+}
+
+#residents-table{
+    margin-left:500px;
+    margin-top: 50px;
+    width:900px;
+    height:500px;
+    padding:20px;
+    box-shadow: 0px 0px 10px rgb(29, 27, 27);
+    border-radius:10px;
+}
+
+table{
+    border-spacing: 30px;
+    text-align:left;
+}
+
+table th{
+    border-bottom:1px solid white;
+}
+
+#delete-btn{
+    border:none;
+    background-color:red;
+    color:white;
+    padding:5px;
+}
+
+#visitor-count{
+    margin-left:100px;
+    margin-top:50px;
+    width:300px;
+    height:120px;
+    padding:10px;
+    box-shadow: 0px 0px 10px rgb(29, 27, 27);
+    border-radius:10px;
+}
+
+#visitor-count h3{
+    margin-left:40px;
+}
+
+#visitor-table{
+    margin-left:500px;
+    margin-top: 50px;
+    width:900px;
+    height:500px;
+    padding:20px;
+    box-shadow: 0px 0px 10px rgb(29, 27, 27);
+    border-radius:10px;
+}
+
+#building-image{
+    margin-left:100px;
+    margin-top:50px;
+    width:300px;
+    height:400px;
+    padding:20px;
+    box-shadow: 0px 0px 10px rgb(29, 27, 27);
+    border-radius:10px;
+}
+
+#boccupiedbtn{
+    background-color:rgb(225, 109, 54) ;
+    border:none;
+    padding:10px;
+}
+
+#buildings-table{
+    margin-left:500px;
+    margin-top: 50px;
+    width:500px;
+    height:400px;
+    padding:20px;
+    box-shadow: 0px 0px 10px rgb(29, 27, 27);
+    border-radius:10px;
+}
+
+#pool-status-1{
+    width:120px;
+    height:120px;
+    box-shadow: 0px 0px 10px rgb(29, 27, 27);
+    border-radius:10px;
+    font-size:50px;
+    text-align:center;
+    background-color:green;
+}
+
+#pool-status-1 a{
+    padding:none;
+}
+
+#status1-text{
+    margin-left:100px;
+    margin-top:50px;
+}
+
+#pool-status-2{
+    width:120px;
+    height:120px;
+    box-shadow: 0px 0px 10px rgb(29, 27, 27);
+    border-radius:10px;
+    font-size:50px;
+    text-align:center;
+    background-color:green;
+}
+
+#pool-status-2 a{
+    padding:none;
+}
+
+#status2-text{
+    margin-left:100px;
+    margin-top:300px;
+}
+
+#pool-status-3{
+    width:120px;
+    height:120px;
+    box-shadow: 0px 0px 10px rgb(29, 27, 27);
+    border-radius:10px;
+    font-size:50px;
+    text-align:center;
+    background-color:red;
+}
+
+#pool-status-3 a{
+    padding:none;
+}
+
+#status3-text{
+    margin-left:100px;
+    margin-top:550px;
+}
+
+#pool-table{
+    margin-left:500px;
+    margin-top: 50px;
+    width:600px;
+    height:400px;
+    padding:20px;
+    box-shadow: 0px 0px 10px rgb(29, 27, 27);
+    border-radius:10px;
+}
+
+#garden-table{
+    margin-left:550px;
+    width:700px;
+    height:400px;
+    padding:20px;
+    box-shadow: 0px 0px 10px rgb(29, 27, 27);
+    border-radius:10px;
+}
+
+#plant-table{
+    margin-left:550px;
+    margin-top: 430px;
+    width:700px;
+    height:400px;
+    padding:20px;
+    box-shadow: 0px 0px 10px rgb(29, 27, 27);
+    border-radius:10px;
+}
+
+#services-table{
+    margin-left:500px;
+    margin-top: 50px;
+    width:900px;
+    height:500px;
+    padding:20px;
+    box-shadow: 0px 0px 10px rgb(29, 27, 27);
+    border-radius:10px;
+}
+
+/*Admin Code*/
+
+/*Resident Code*/
+#rleftbar{
+    height:100%;
+    width:300px;
+    float:left;
+    background-color: #1f1f1f;
+    text-align:center;
+    padding-top:70px;
+    position:fixed;
+}
+
+#rleftbar img{
+    width:100px;
+}
+
+#rleftbar ul{
+    padding:0;
+}
+
+#rleftbar ul li{
+
+    list-style-type: none;
+    width:100%;
+    padding-top:30px;
+    padding-bottom:30px;
+    background-color:#1f1f1f;
+}
+
+#rleftbar ul li:hover{
+    background-color:black;
+}
+
+#rleftbar ul li.selected{
+    background-color:black;
+}
+
+#rleftbar ul a{
+    text-decoration:none;
+    color:white;
+}
+
+#userlogout{
+    text-decoration: none;
+    background-color:red;
+    color:white;
+    padding:10px;
+    border-radius:5px;
+}
+
+#rrightbar{
+    position:fixed;
+    height:100%;
+    width:100%;
+    color:white;
+    margin-left:280px;
+    padding-left:30px;
+}
+
+#rrightbar h1{
+    margin-left:20px;
+}
+
+#rrightbar div{
+    position:absolute;
+}
+
+#userprofile-page{
+    margin-left:100px;
+    margin-top: 100px;
+    width:1000px;
+    height:500px;
+    padding:20px;
+    box-shadow: 0px 0px 10px rgb(29, 27, 27);
+    border-radius:10px;
+}
+
+#profileupdate{
+    background: #9ace38;
+    color: white;
+    padding:10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 7px #77b62f70;
+    cursor:pointer;
+    font-size:0.75vw;
+    width:80px;
+}
+
+#myprofile{
+    width:100%;
+    height:100%;
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+
+#profile-edit{
+    margin-left:70px;
+    margin-top: 700px;
+    width:100%;
+    display:none;
+}
+
+#profile-edit button{
+    margin-left: 200px;
+    background: #9ace38;
+    color: white;
+    padding:10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 7px #77b62f70;
+    cursor:pointer;
+    font-size:0.75vw;
+    width:80px;
+    margin-top:350px;
+}
+
+#profile-edit input:focus{
+    outline:none;
+}
+
+#profile-edit input{
+    width:100%;
+    height:20px;
+    background-color: black;
+    border:none;
+    border-bottom: 1px solid white;
+    color:white;
+
+}
+
+#services{
+    display:none;
+}
+
+#upload{
+    display:none;
+}
+
+#rvisitors{
+    display:none;
+}
+
+#chat{
+    display:none;
+}
+
+#water{
+    margin-left:100px;
+    margin-top:100px;
+    width:200px;
+    height:300px;
+    padding:20px;
+    box-shadow: 0px 0px 10px rgb(29, 27, 27);
+    border-radius:10px;
+    padding-left:30px;
+}
+
+#water a{
+    font-size:150px;
+    color:red;
+}
+
+#electricity{
+    margin-left:400px;
+    margin-top:100px;
+    width:200px;
+    height:300px;
+    padding:20px;
+    box-shadow: 0px 0px 10px rgb(29, 27, 27);
+    border-radius:10px;
+}
+
+#electricity a{
+    font-size:150px;
+    padding-left:60px;
+    color:red;
+}
+
+#wifi{
+    margin-left:700px;
+    margin-top:100px;
+    width:200px;
+    height:300px;
+    padding:20px;
+    box-shadow: 0px 0px 10px rgb(29, 27, 27);
+    border-radius:10px;
+}
+
+#wifi a{
+    font-size:150px;
+    padding-left:10px;
+    color:red;
+}
+
+#trash{
+    margin-left:1000px;
+    margin-top:100px;
+    width:200px;
+    height:300px;
+    padding:20px;
+    box-shadow: 0px 0px 10px rgb(29, 27, 27);
+    border-radius:10px;
+}
+
+#trash a{
+    font-size:150px;
+    padding-left:40px;
+    color:red;
+}
+
+#rvisitor-form{
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position:fixed;
+    padding-top:50px;
+    z-index:2;
+    margin-left:400px;
+    
+}
+
+#rvisitor-form form{
+    position:absolute;
+    z-index:2;
+    width:400px;
+    height:700px;
+    background-color:#1f1f1f;
+    border-radius: 10px;
+    padding:10px;
+    margin-left:40%;
+}
+
+#rvisitor-form h1{
+    margin-left:20px;
+}
+
+#rvisitor-form input{
+    width:80%;
+    margin-left:20px;
+    height:20px;
+    background-color: #1f1f1f;
+    border:none;
+    border-bottom: 1px solid white;
+    color:white;
+
+}
+
+#rvisitor-form input:focus{
+    border:none;
+    outline:none;
+    border-bottom: 1px solid white;
+    color:white;
+}
+
+#rvisitor-form label{
+    margin-left:20px;
+    color:white;
+}
+
+#rvisitor-form button{
+    margin-left: 20px;
+    background: #9ace38;
+    color: white;
+    padding:10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 7px #77b62f70;
+    cursor:pointer;
+    font-size:15px;
+    width:80px;
+}
+
+#chat{
+    position:absolute;
+}
+
+#mainbox{
+    position:relative;
+    z-index:2;
+    width:1500px;
+    height:850px;
+    margin-left:40%;
+    box-shadow: 0px 0px 10px rgb(29, 27, 27);
+}
+
+#allchats{
+    border-right:0.5px ridge #1f1f1f;
+    width:400px;
+    height:850px;
+}
+
+#allchats a{
+    text-decoration:none;
+    color:white;
+}
+
+#allchats ul{
+    list-style-type: none;
+    padding-left:0px;;
+}
+
+#allchats ul li{
+    padding:25px;
+    box-shadow: 0px 0px 10px rgb(29, 27, 27);
+}
+
+#allchats ul li:hover{
+    background-color:#1f1f1f
+}
+
+#chatbox{
+    margin-left:420px;
+}
+
+#messagebox{
+    width:1050px;
+    height:50px;
+    border-radius:20px;
+    border:1px solid #1f1f1f;
+    margin-top:700px;
+}
+
+#messagebox a{
+    float:right;
+    padding:0px;
+    font-size:30px;
+    padding-right:30px;
+    padding-top:10px;
+    color:rgb(62, 62, 247);
+}
+
+#messagebox input{
+    margin-top:10px;
+    margin-left:20px;
+    width:900px;
+    height:30px;
+    background-color:black;
+    border:none;
+    outline:none;
+    color:white;
+}
+
+#message input:focus{
+    border:none;
+    outline:none;
+}
+
+#adminchat{
+    display:none;
+}
+
+#chatblob1{
+    width:100px;
+    height:50px;
+    border-radius:20px;
+    border:1px solid #1f1f1f;
+    margin-top:500px;
+    margin-left:900px;
+}
+
+#chatblob1 input{
+    margin-top:20px;
+    margin-left:20px;
+    background-color:black;
+    color:white;
+    border:none;
+    outline:none;
+    width:60px;
+}
+
+#chatblob2{
+    width:100px;
+    height:50px;
+    border-radius:20px;
+    border:1px solid #1f1f1f;
+    margin-top:600px;
+    background-color:rgb(162, 72, 223);
+    color:white;
+}
+
+#chatblob2 input{
+    margin-top:20px;
+    margin-left:20px;
+    background-color:rgb(162, 72, 223);
+    color:white;
+    border:none;
+    outline:none;
+    width:60px;
+}
+
+#uploadarea{
+    width:1000px;
+    height:500px;
+    border-radius:20px;
+    box-shadow: 0px 0px 20px rgb(29, 27, 27);
+    background-color:#1f1f1f;
+    border:none;
+    margin-left:200px;
+    margin-top:100px;
+    font-size:20px;
+
+}
+
+#uploadarea input{
+    margin-top:550px;
+    margin-left:20px;
+    color:rgb(132, 175, 66);
+    border:none;
+}
+
+#uploadarea input:focus{
+    border:none;
+    outline:none;
+}
+
+#uploadarea a{
+    background-color:rgb(132, 175, 66);
+    border:none;
+    width:80px;
+    height:40px;
+    padding:10px;
+    border-radius:20px;
+    margin-left:20px;
+}
+
+#uploadbutton{
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	z-index: -1;
+}
+/*Resident Code*/
+
+/* Manager Code*/
+#manleftbar{
+    height:100%;
+    width:300px;
+    float:left;
+    background-color: #1f1f1f;
+    text-align:center;
+    padding-top:70px;
+    position:fixed;
+}
+
+#manleftbar img{
+    width:100px;
+}
+
+#manleftbar ul{
+    padding:0;
+}
+
+#manleftbar ul li{
+
+    list-style-type: none;
+    width:100%;
+    padding-top:30px;
+    padding-bottom:30px;
+    background-color:#1f1f1f;
+}
+
+#manleftbar ul li:hover{
+    background-color:black;
+}
+
+#manleftbar ul li.selected{
+    background-color:black;
+}
+
+#manleftbar ul a{
+    text-decoration:none;
+    color:white;
+}
+
+#managerlogout{
+    text-decoration: none;
+    background-color:red;
+    color:white;
+    padding:10px;
+    border-radius:5px;
+}
+
+#manrightbar{
+    position:fixed;
+    height:100%;
+    width:100%;
+    color:white;
+    margin-left:280px;
+    padding-left:30px;
+}
+
+#manrightbar h1{
+    margin-left:20px;
+}
+
+#manrightbar div{
+    position:absolute;
+}
+
+#visitor-page{
+    display:none;
+}
+
+#chat-page{
+    display:none;
+}
+
+#man-pool{
+    display:none;
+}
+
+#man-garden{
+    display:none;
+}
+
+#man-aservices{
+    display:none;
+}
+
+#apartment-table{
+    margin-left:20px;
+    margin-top: 50px;
+    width:1200px;
+    height:500px;
+    padding:20px;
+    box-shadow: 0px 0px 10px rgb(29, 27, 27);
+    border-radius:10px;
+}
+
+#email-btn{
+    border:none;
+    background-color:green;
+    color:white;
+    padding:5px;
+    margin:10px;
+}
+
+#man-visitor-table{
+    margin-left:20px;
+    margin-top: 50px;
+    width:1200px;
+    height:500px;
+    padding:20px;
+    box-shadow: 0px 0px 10px rgb(29, 27, 27);
+    border-radius:10px;
+}
+
+#manmainbox{
+    position:relative;
+    z-index:2;
+    width:1500px;
+    height:850px;
+    margin-left:40%;
+    box-shadow: 0px 0px 10px rgb(29, 27, 27);
+}
+
+#manallchats{
+    border-right:0.5px ridge #1f1f1f;
+    width:400px;
+    height:850px;
+}
+
+#manallchats a{
+    text-decoration:none;
+    color:white;
+}
+
+#manallchats ul{
+    list-style-type: none;
+    padding-left:0px;;
+}
+
+#manallchats ul li{
+    padding:25px;
+    box-shadow: 0px 0px 10px rgb(29, 27, 27);
+}
+
+#manallchats ul li:hover{
+    background-color:#1f1f1f
+}
+
+#manchatbox{
+    margin-left:420px;
+}
+
+#messagebox{
+    width:1050px;
+    height:50px;
+    border-radius:20px;
+    border:1px solid #1f1f1f;
+    margin-top:700px;
+}
+
+#messagebox a{
+    float:right;
+    padding:0px;
+    font-size:30px;
+    padding-right:30px;
+    padding-top:10px;
+    color:rgb(62, 62, 247);
+}
+
+#messagebox input{
+    margin-top:10px;
+    margin-left:20px;
+    width:900px;
+    height:30px;
+    background-color:black;
+    border:none;
+    outline:none;
+    color:white;
+}
+
+#message input:focus{
+    border:none;
+    outline:none;
+}
+
+#adminchat{
+    display:none;
+}
+
+#chatblob1{
+    width:100px;
+    height:50px;
+    border-radius:20px;
+    border:1px solid #1f1f1f;
+    margin-top:500px;
+    margin-left:900px;
+}
+
+#chatblob1 input{
+    margin-top:20px;
+    margin-left:20px;
+    background-color:black;
+    color:white;
+    border:none;
+    outline:none;
+    width:60px;
+}
+
+#chatblob2{
+    width:100px;
+    height:50px;
+    border-radius:20px;
+    border:1px solid #1f1f1f;
+    margin-top:600px;
+    background-color:rgb(162, 72, 223);
+    color:white;
+}
+
+#chatblob2 input{
+    margin-top:20px;
+    margin-left:20px;
+    background-color:rgb(162, 72, 223);
+    color:white;
+    border:none;
+    outline:none;
+    width:60px;
+}
+
+#resident2{
+    display:block;
+}
+
+#man-pool-table{
+    margin-left:100px;
+    margin-top: 50px;
+    width:1000px;
+    height:400px;
+    padding:20px;
+    box-shadow: 0px 0px 10px rgb(29, 27, 27);
+    border-radius:10px;
+}
+
+#man-garden-table{
+    margin-left:100px;
+    width:700px;
+    height:400px;
+    padding:20px;
+    box-shadow: 0px 0px 10px rgb(29, 27, 27);
+    border-radius:10px;
+}
+
+#man-plant-table{
+    margin-left:100px;
+    margin-top: 430px;
+    width:700px;
+    height:400px;
+    padding:20px;
+    box-shadow: 0px 0px 10px rgb(29, 27, 27);
+    border-radius:10px;
+}
+
+#man-services-table{
+    margin-left:100px;
+    margin-top: 50px;
+    width:900px;
+    height:500px;
+    padding:20px;
+    box-shadow: 0px 0px 10px rgb(29, 27, 27);
+    border-radius:10px;
+}
+/*Manager Code*/
+
+/* Visitor Code*/
+#visitleftbar{
+    height:100%;
+    width:300px;
+    float:left;
+    background-color: #1f1f1f;
+    text-align:center;
+    padding-top:70px;
+    position:fixed;
+}
+
+#visitleftbar img{
+    width:100px;
+}
+
+#visitleftbar ul{
+    padding:0;
+}
+
+#visitleftbar ul li{
+
+    list-style-type: none;
+    width:100%;
+    padding-top:30px;
+    padding-bottom:30px;
+    background-color:#1f1f1f;
+}
+
+#visitleftbar ul li:hover{
+    background-color:black;
+}
+
+#visitleftbar ul li.selected{
+    background-color:black;
+}
+
+#visitleftbar ul a{
+    text-decoration:none;
+    color:white;
+}
+
+#visitorlogout{
+    text-decoration: none;
+    background-color:red;
+    color:white;
+    padding:10px;
+    border-radius:5px;
+}
+
+#visitrightbar{
+    position:fixed;
+    height:100%;
+    width:100%;
+    color:white;
+    margin-left:280px;
+    padding-left:30px;
+}
+
+#visitrightbar h1{
+    margin-left:20px;
+}
+
+#visitrightbar div{
+    position:absolute;
+}
+
+#visitgarden{
+    display:none;
+}
+
+#visitchat{
+    display:none;
+}
+
+#visit-visitor-form{
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top:50px;
+    z-index:2;
+    
+}
+
+#visit-visitor-form form{
+    position:absolute;
+    z-index:2;
+    width:400px;
+    height:800px;
+    background-color:#1f1f1f;
+    border-radius: 10px;
+    padding:10px;
+    margin-left:40%;
+}
+
+#visit-visitor-form h1{
+    margin-left:20px;
+}
+
+#visit-visitor-form input{
+    width:80%;
+    margin-left:20px;
+    height:20px;
+    background-color: #1f1f1f;
+    border:none;
+    border-bottom: 1px solid white;
+    color:white;
+
+}
+
+#visit-visitor-form input:focus{
+    border:none;
+    outline:none;
+    border-bottom: 1px solid white;
+    color:white;
+}
+
+#visit-visitor-form label{
+    margin-left:20px;
+    color:white;
+}
+
+#visit-visitor-form button{
+    margin-left: 20px;
+    background: #9ace38;
+    color: white;
+    padding:10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 7px #77b62f70;
+    cursor:pointer;
+    font-size:0.75vw;
+    width:80px;
+}
+
+
+
+#visit-garden-form{
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top:50px;
+    z-index:2;
+    
+}
+
+#visit-garden-form form{
+    position:absolute;
+    z-index:2;
+    width:400px;
+    height:700px;
+    background-color:#1f1f1f;
+    border-radius: 10px;
+    padding:10px;
+    margin-left:40%;
+}
+
+#visit-garden-form h1{
+    margin-left:20px;
+}
+
+#visit-garden-form input{
+    width:80%;
+    margin-left:20px;
+    height:20px;
+    background-color: #1f1f1f;
+    border:none;
+    border-bottom: 1px solid white;
+    color:white;
+
+}
+
+#visit-garden-form input:focus{
+    border:none;
+    outline:none;
+    border-bottom: 1px solid white;
+    color:white;
+}
+
+#visit-garden-form label{
+    margin-left:20px;
+    color:white;
+}
+
+#visit-garden-form button{
+    margin-left: 20px;
+    background: #9ace38;
+    color: white;
+    padding:10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 7px #77b62f70;
+    cursor:pointer;
+    font-size:0.75vw;
+    width:80px;
+}
+
+#visit-garden-form select{
+    background-color:#1f1f1f;
+    margin-left:20px;
+    width:80%;
+    border:none;
+    color:white;
+    border-bottom:1px solid white;
+}
+
+#visit-garden-form select:focus{
+    border:none;
+    outline:none;
+    border-bottom:1px solid white;
+}
+
+#visitmainbox{
+    position:relative;
+    z-index:2;
+    width:1500px;
+    height:850px;
+    margin-left:40%;
+    box-shadow: 0px 0px 10px rgb(29, 27, 27);
+}
+
+#visitallchats{
+    border-right:0.5px ridge #1f1f1f;
+    width:400px;
+    height:850px;
+}
+
+#visitallchats a{
+    text-decoration:none;
+    color:white;
+}
+
+#visitallchats ul{
+    list-style-type: none;
+    padding-left:0px;;
+}
+
+#visitallchats ul li{
+    padding:25px;
+    box-shadow: 0px 0px 10px rgb(29, 27, 27);
+}
+
+#visitallchats ul li:hover{
+    background-color:#1f1f1f
+}
+
+#visitchatbox{
+    margin-left:420px;
+}
+
+#apartment-owner-1{
+    display:none;
+}
+/*Visitor Code*/
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 30px;
+    min-height: 30rem;
+  }
+  #chat-form {
+    max-width: 350px;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 3px 24px -8px rgba(0, 0, 0, 0.75);
+    background-color:white;
+  }
+  
+  .name-field {
+    margin-bottom: 40px;
+  }
+  
+  #chat-button {
+    margin-top: 20px;
+    padding: 10px;
+    background: transparent;
+    border-radius: 5px;
+  }
+  
+  .render-chat {
+    max-width: 350px;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 3px 24px -8px rgba(255, 255, 255, 0.75);
+    background-color:white;
+  }
+  
+  #message-display {
+    color: #2f72da;
+  }
+  
+  #chat-span {
+    color: black;
+  }
+
+  #chat-headers{
+      color: black;
+  }
+
+  #services-insert-form{
+    margin-left:30px;
+    margin-top: 600px;
+    width:100%;
+    display:none;
+}
+
+#services-insert-form button{
+    margin-left: 200px;
+    background: #9ace38;
+    color: white;
+    padding:10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 7px #77b62f70;
+    cursor:pointer;
+    font-size:0.75vw;
+    width:80px;
+    margin-top:350px;
+}
+
+#services-insert-form input:focus{
+    outline:none;
+}
+
+#services-insert-form input{
+    width:100%;
+    height:20px;
+    background-color: black;
+    border:none;
+    border-bottom: 1px solid white;
+    color:white;
+
+}
+
+
+#services-update-form{
+    margin-left:30px;
+    margin-top: 600px;
+    width:100%;
+    display:none;
+}
+
+#services-update-form button{
+    margin-left: 200px;
+    background: #9ace38;
+    color: white;
+    padding:10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 7px #77b62f70;
+    cursor:pointer;
+    font-size:0.75vw;
+    width:80px;
+    margin-top:350px;
+}
+
+#services-update-form input:focus{
+    outline:none;
+}
+
+#services-update-form input{
+    width:100%;
+    height:20px;
+    background-color: black;
+    border:none;
+    border-bottom: 1px solid white;
+    color:white;
+
+}
+
+#email-btn{
+    border:none;
+    background-color:green;
+    color:white;
+    padding:5px;
+    margin:10px;
+}
+
+#update-btn{
+    border:none;
+    background-color:blue;
+    color:white;
+    padding:5px;
+    margin:10px;
+}
+
+#apartment-page{
+    width:100%;
+    height:100%;
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+
+#insert-form{
+    margin-left:30px;
+    margin-top: 600px;
+    width:100%;
+    display:none;
+}
+
+#insert-form button{
+    margin-left: 200px;
+    background: #9ace38;
+    color: white;
+    padding:10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 7px #77b62f70;
+    cursor:pointer;
+    font-size:0.75vw;
+    width:80px;
+    margin-top:350px;
+}
+
+#insert-form input:focus{
+    outline:none;
+}
+
+#insert-form input{
+    width:100%;
+    height:20px;
+    background-color: black;
+    border:none;
+    border-bottom: 1px solid white;
+    color:white;
+
+}
+
+
+#update-form{
+    margin-left:30px;
+    margin-top: 600px;
+    width:100%;
+    display:none;
+}
+
+#update-form button{
+    margin-left: 200px;
+    background: #9ace38;
+    color: white;
+    padding:10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 7px #77b62f70;
+    cursor:pointer;
+    font-size:0.75vw;
+    width:80px;
+    margin-top:350px;
+}
+
+#update-form input:focus{
+    outline:none;
+}
+
+#update-form input{
+    width:100%;
+    height:20px;
+    background-color: black;
+    border:none;
+    border-bottom: 1px solid white;
+    color:white;
+
+}
+
+#visitor-page{
+    width:100%;
+    height:100%;
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+
+#vis-insert-form{
+    margin-left:30px;
+    margin-top: 600px;
+    width:100%;
+    display:none;
+}
+
+#vis-insert-form button{
+    margin-left: 200px;
+    background: #9ace38;
+    color: white;
+    padding:10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 7px #77b62f70;
+    cursor:pointer;
+    font-size:0.75vw;
+    width:80px;
+    margin-top:350px;
+}
+
+#vis-insert-form input:focus{
+    outline:none;
+}
+
+#vis-insert-form input{
+    width:100%;
+    height:20px;
+    background-color: black;
+    border:none;
+    border-bottom: 1px solid white;
+    color:white;
+
+}
+
+
+#vis-update-form{
+    margin-left:30px;
+    margin-top: 600px;
+    width:100%;
+    display:none;
+}
+
+#vis-update-form button{
+    margin-left: 200px;
+    background: #9ace38;
+    color: white;
+    padding:10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 7px #77b62f70;
+    cursor:pointer;
+    font-size:0.75vw;
+    width:80px;
+    margin-top:350px;
+}
+
+#vis-update-form input:focus{
+    outline:none;
+}
+
+#vis-update-form input{
+    width:100%;
+    height:20px;
+    background-color: black;
+    border:none;
+    border-bottom: 1px solid white;
+    color:white;
+
+}
+
+#email-btn{
+    border:none;
+    background-color:green;
+    color:white;
+    padding:5px;
+    margin:10px;
+}
+
+#update-btn{
+    border:none;
+    background-color:blue;
+    color:white;
+    padding:5px;
+    margin:10px;
+}
+  
+
+#man-pool{
+    width:100%;
+    height:100%;
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+
+#pool-insert-form{
+    margin-left:30px;
+    margin-top: 600px;
+    width:100%;
+    display:none;
+}
+
+#pool-insert-form button{
+    margin-left: 200px;
+    background: #9ace38;
+    color: white;
+    padding:10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 7px #77b62f70;
+    cursor:pointer;
+    font-size:0.75vw;
+    width:80px;
+    margin-top:350px;
+}
+
+#pool-insert-form input:focus{
+    outline:none;
+}
+
+#pool-insert-form input{
+    width:100%;
+    height:20px;
+    background-color: black;
+    border:none;
+    border-bottom: 1px solid white;
+    color:white;
+
+}
+
+
+#pool-update-form{
+    margin-left:30px;
+    margin-top: 600px;
+    width:100%;
+    display:none;
+}
+
+#pool-update-form button{
+    margin-left: 200px;
+    background: #9ace38;
+    color: white;
+    padding:10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 7px #77b62f70;
+    cursor:pointer;
+    font-size:0.75vw;
+    width:80px;
+    margin-top:350px;
+}
+
+#pool-update-form input:focus{
+    outline:none;
+}
+
+#pool-update-form input{
+    width:100%;
+    height:20px;
+    background-color: black;
+    border:none;
+    border-bottom: 1px solid white;
+    color:white;
+
+}
+
+#email-btn{
+    border:none;
+    background-color:green;
+    color:white;
+    padding:5px;
+    margin:10px;
+}
+
+#update-btn{
+    border:none;
+    background-color:blue;
+    color:white;
+    padding:5px;
+    margin:10px;
+}
+
+#man-garden{
+    width:100%;
+    height:100%;
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+
+#man-aservices{
+    width:100%;
+    height:100%;
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+
+#garden-insert-form{
+    margin-left:30px;
+    margin-top: 600px;
+    width:100%;
+    display:none;
+}
+
+#garden-insert-form button{
+    margin-left: 200px;
+    background: #9ace38;
+    color: white;
+    padding:10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 7px #77b62f70;
+    cursor:pointer;
+    font-size:0.75vw;
+    width:80px;
+    margin-top:350px;
+}
+
+#garden-insert-form input:focus{
+    outline:none;
+}
+
+#garden-insert-form input{
+    width:100%;
+    height:20px;
+    background-color: black;
+    border:none;
+    border-bottom: 1px solid white;
+    color:white;
+
+}
+
+
+#garden-update-form{
+    margin-left:30px;
+    margin-top: 600px;
+    width:100%;
+    display:none;
+}
+
+#garden-update-form button{
+    margin-left: 200px;
+    background: #9ace38;
+    color: white;
+    padding:10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 7px #77b62f70;
+    cursor:pointer;
+    font-size:0.75vw;
+    width:80px;
+    margin-top:350px;
+}
+
+#garden-update-form input:focus{
+    outline:none;
+}
+
+#garden-update-form input{
+    width:100%;
+    height:20px;
+    background-color: black;
+    border:none;
+    border-bottom: 1px solid white;
+    color:white;
+
+}
+
+#email-btn{
+    border:none;
+    background-color:green;
+    color:white;
+    padding:5px;
+    margin:10px;
+}
+
+#update-btn{
+    border:none;
+    background-color:blue;
+    color:white;
+    padding:5px;
+    margin:10px;
+}
+
+#plant-insert-form{
+    margin-left:30px;
+    margin-top: 600px;
+    width:100%;
+    display:none;
+}
+
+#plant-insert-form button{
+    margin-left: 200px;
+    background: #9ace38;
+    color: white;
+    padding:10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 7px #77b62f70;
+    cursor:pointer;
+    font-size:0.75vw;
+    width:80px;
+    margin-top:350px;
+}
+
+#plant-insert-form input:focus{
+    outline:none;
+}
+
+#plant-insert-form input{
+    width:100%;
+    height:20px;
+    background-color: black;
+    border:none;
+    border-bottom: 1px solid white;
+    color:white;
+
+}
+
+
+#plant-update-form{
+    margin-left:30px;
+    margin-top: 600px;
+    width:100%;
+    display:none;
+}
+
+#plant-update-form button{
+    margin-left: 200px;
+    background: #9ace38;
+    color: white;
+    padding:10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 7px #77b62f70;
+    cursor:pointer;
+    font-size:0.75vw;
+    width:80px;
+    margin-top:350px;
+}
+
+#plant-update-form input:focus{
+    outline:none;
+}
+
+#plant-update-form input{
+    width:100%;
+    height:20px;
+    background-color: black;
+    border:none;
+    border-bottom: 1px solid white;
+    color:white;
+
+}
+
